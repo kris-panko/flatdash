@@ -16,6 +16,7 @@ Stretch Deliverables:
 1. User will automatically see the current weather in their city based on geo-location
 2. User will automatically see the current time in their respective time zone.
 3. User will see an analog clock showing the current time.
+4. User will be able to click memes to cycle through different memes. 
 
 API's with JSON structure:
 

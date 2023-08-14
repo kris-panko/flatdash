@@ -1,1 +1,67 @@
-
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flatDash</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="index.js"></script>
+</head>
+<body>
+  <div class="dashboard-container">
+    <div class="dashboard">
+      <h1 class="dashboard-title">flatDash</h1>    
+       <div class="dark-mode-toggle">
+    <label class="switch">
+      <input type="checkbox" id="dark-mode-checkbox">
+      <span class="slider round"></span>
+    </label>
+    <span class="toggle-label">Dark Mode Toggle</span>
+  </div>
+      <div class="widgets-container">
+      <div class="widgets-container">
+        <div class="widget weather-widget">
+          <!-- Weather widget content -->
+          <h2>Weather</h2>
+          <form id="weather-form">
+            <label for="city">Enter City:</label>
+            <input type="text" id="city" name="city" required><br>
+            <button type="submit">Get Weather</button>
+          </form>
+          <div id="weather-data"></div>
+        </div>
+        <div class="widget todo-widget">
+          <!-- Todo list widget content -->
+          <div id="main-content">
+  <h2>To-Do List</h2>
+  <form id="create-new-to-do" action="" method="POST">
+    <label for="new-to-do">To-Do:</label>
+    <input type="text" id="new-to-do" name="new-to-do" placeholder=“to-do!”>
+    <input type="submit" value="Add Task">
+  </form>
+  <div class="task-box">
+    <ul id="tasks">
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="widget meme-widget">
+          <!-- Meme of the Day widget content -->
+          <h2>Meme of the Day</h2>
+          <img id="meme-image" class="meme-image" src="" alt="Meme of the Day">
+          <button id="random-meme-button">Randomize</button>
+        </div>
+        <div class="widget clock-widget">
+          <!-- Analog Clock widget content -->
+          <h2>Analog Clock</h2>
+          <div class="clock">
+            <div class="hour-hand" id="hour-hand"></div>
+            <div class="minute-hand" id="minute-hand"></div>
+            <div class="second-hand" id="second-hand"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

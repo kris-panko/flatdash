@@ -1,1 +1,260 @@
+/* Reset default styles */
+body, h1, h2, ul, li, form {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* General styling for the dashboard */
+  .dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa; /* Light gray background for the dashboard container */
+  }
+  
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px;
+    width: 100%; /* Adjust the width to fill the viewport */
+    border-radius: 20px; /* Rounded corners for the dashboard container */
+    background-color: #ffffff; /* White background for the dashboard */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  
+  .dashboard-title {
+    text-align: center;
+    margin-bottom: 20px; /* Space below the title */
+    font-size: 54px; /* Increase title font size */
+    color: #3498db; /* Blue title color */
+    text-transform: uppercase; /* Uppercase title text */
+    letter-spacing: 2px; /* Letter spacing for a fancy look */
+    font-weight: 800; /* Bold title */
+  }
+  
+  .widgets-container {
+    position: relative; /* For positioning the background */
+    display: flex;
+    flex-direction: row; /* Display widgets side by side */
+    justify-content: center; /* Center widgets horizontally */
+    gap: 40px;
+    overflow-x: auto; /* Allow horizontal scrolling if widgets don't fit */
+    background-color: #d3e0ea; /* Light blue background behind the widgets */
+    border-radius: 20px; /* Rounded corners for the background */
+    padding: 30px; /* Space between the background and widgets */
+  }
+  
+  .meme-image {
+    width: 250px; /* Adjust this value as needed */
+    height: auto; /* This will maintain the aspect ratio */
+    max-width: 250px; /* Prevent images from exceeding their natural size */
+  }
 
+  .widget {
+    flex: 1; /* Equal width for all widgets */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /* Center text horizontally */
+    border: 2px solid #ccc;
+    padding: 30px;
+    border-radius: 20px; /* Rounded corners for each widget */
+    color: black; /* Set text color to white */
+    background: linear-gradient(135deg, #3498db, #2980b9); /* Gradient background for the widgets */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .widget:hover {
+    transform: translateY(-5px); /* Apply a slight lift on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
+  }
+  
+  /* Widget-specific styling
+  /* Weather Widget */
+  /* .weather-widget { */
+    /* Add specific styles for the weather widget */
+  /* } */
+  
+  /* Todo List Widget */
+  /* .todo-widget { */
+    /* Add specific styles for the todo list widget */
+  /* } */
+  
+  /* Meme of the Day Widget */
+  /* .meme-widget { */
+    /* Add specific styles for the meme widget */
+  /* } */ */
+  
+  /* Analog Clock Widget */
+  .clock-widget {
+    /* Add specific styles for the analog clock widget */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .clock {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 30px;
+    border: 2px solid #3498db;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
+  }
+  
+  .hour-hand,
+  .minute-hand,
+  .second-hand {
+    position: absolute;
+    transform-origin: center bottom;
+    background-color: #3498db;
+  }
+  
+  .hour-hand {
+    width: 4px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    border-radius: 2px;
+    z-index: 3;
+  }
+  
+  .minute-hand {
+    width: 3px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    border-radius: 2px;
+    z-index: 2;
+  }
+  
+  .second-hand {
+    width: 2px;
+    height: 55px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    border-radius: 2px;
+    z-index: 1;
+  }
+  
+  /* Dark Mode Toggle */
+  .dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: background-color 0.3s, border-color 0.3s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: transform 0.3s, background-color 0.3s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #3498db;
+    border-color: #3498db; /* Adding a transition to border color */
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+    background-color: #3498db; /* Changing the background color */
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  .toggle-label {
+    margin-left: 10px;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  /* Dark mode background color for the container holding widgets */
+  .dark-mode .widgets-container {
+    background-color: #333; /* Change this color to your preferred dark mode background */
+    transition: background-color 0.3s; /* Adding a transition to background color */
+  }
+  .task-box {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 15px;
+  }
+  
+  #tasks {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    color: #000; /* Set the text color to black */
+  }
+  
+  .task-item:last-child {
+    border-bottom: none;
+  }
+  
+  .task-text {
+    flex-grow: 1;
+  }
+  
+  .task-delete {
+    cursor: pointer;
+    color: #f44336;
+  }

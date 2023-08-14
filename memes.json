@@ -1,0 +1,66 @@
+{
+    "memes": [
+    
+    {
+        "id": "1",
+        "path": "https://b1694534.smushcdn.com/1694534/wp-content/uploads/2021/06/its-a-frontend-is-it-3oth-its-both-backend-i-44043917-1.png?lossy=1&strip=1&webp=1",
+        "width": 1080,
+        "height": 1080
+    },
+    
+    {
+        "id": "2",
+        "path": "https://b1694534.smushcdn.com/1694534/wp-content/uploads/2021/06/2.jpeg?lossy=1&strip=1&webp=1",
+        "width": 712,
+        "height": 752
+    },
+    {
+        "id": "3",
+        "path": "https://www.freecodecamp.org/news/content/images/2019/07/scumbag-javascript.jpeg",
+        "width": 904,
+        "height": 1280
+    },
+    {
+        "id": "4",
+        "path": "https://miro.medium.com/v2/resize:fit:1400/0*0He9yJwnAf2Mqt5P",
+        "width": 1065,
+        "height": 1279
+    },
+    {
+        "id": "5",
+        "path": "https://miro.medium.com/v2/resize:fit:720/0*keUDIhFt1Zu7I9RZ",
+        "width": 750,
+        "height": 696
+    },
+    {
+        "id": "6",
+        "path": "https://miro.medium.com/v2/resize:fit:720/0*BiJC6eN_60ANK4Q2",
+        "width": 710,
+        "height": 840
+    },
+    {
+        "id": "7",
+        "path": "https://i.chzbgr.com/full/9726542592/hCC0A0D42/mug-javascript-frontend-backend-mobile-apps-machine-learning-desktop-apps",
+        "width": 892,
+        "height": 993
+    },
+    {
+        "id": "8",
+        "path": "https://global.discourse-cdn.com/business7/uploads/replitteams/optimized/2X/d/dcc4f788a832aab8587c61191871347e2ac6c7de_2_479x500.png",
+        "width": 630,
+        "height": 960
+    },
+    {
+        "id": "9",
+        "path": "https://global.discourse-cdn.com/business7/uploads/replitteams/optimized/2X/d/dcc4f788a832aab8587c61191871347e2ac6c7de_2_479x500.png",
+        "width": 460,
+        "height": 276
+    },
+    {
+        "id": "10",
+        "path": "https://pbs.twimg.com/media/EyD2m3PU4AMC0VE.jpg",
+        "width": 911,
+        "height": 1000
+    }
+    ]
+}
