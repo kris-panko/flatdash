@@ -7,15 +7,15 @@ flatDash is a simple dashboard website with multiple useful and fun widgets incl
 
 Deliverables:
 1. User will be able to input current city and weather widget will return current weather for said city.
-2. User will see a featured meme of the day (specifically programming themed)
+2. User will see a featured meme of the day (specifically programming themed).  User will be able to click meme to regeneratte a new one to display.
 3. User will be able to input tasks as part of a to-do list.  Task will then populate for user reference.
 4. User will then be able to delete the task once complete.
-5. User will see an analog clock showing the current time.
+5. User will be able to toggle the widget from dark/light backgrounds.
 
 Stretch Deliverables:
-1. Userr will automatically see the current weather in their city based on geo-location
+1. User will automatically see the current weather in their city based on geo-location
 2. User will automatically see the current time in their respective time zone.
-3. User will be able to toggle the widget from dark/light backgrounds.
+3. User will see an analog clock showing the current time.
 
 API's with JSON structure:
 
@@ -30,6 +30,8 @@ Meme of the day widget: https://github.com/deep5050/programming-memes/blob/main/
 Analog Clock Widget: https://timeapi.io/
 
 ![Screenshot 2023-08-14 at 1 29 22 PM](https://github.com/kris-panko/flatdash/assets/11124314/bb18b59e-0ef8-4e5a-a7e9-18580443555a)
+
+Event listeners to be used: Submit(2), Click, Change
 
 
 
