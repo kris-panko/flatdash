@@ -11,6 +11,7 @@ const weatherDataContainer = document.getElementById("weather-data")
 const weatherUrl = "http://api.weatherapi.com/v1" 
 const city = document.querySelector("#city")
 
+
 // Dark Mode Toggle!
 darkModeToggle.addEventListener("change", () => {
     if (darkModeToggle.checked) {
@@ -28,9 +29,48 @@ weatherForm.addEventListener("submit", (e) => {
 let query = encodeURI(e.target.city.value); 
 fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${query}&aqi=no`)
 .then(response => response.json())
-.then(data => {
-  console.log(data);})
+.then(weather => {
+  displayWeather(weather)
+  displayWeatherIcon(weather.current.condition.text)
+})
 });
+
+
+// Display weather data in the weather widget
+function displayWeather(weather) {
+  const temperature = weather.current.temp_f;
+  const condition = weather.current.condition.text;
+
+  const weatherOutput = `
+    <h3>Weather in ${weather.location.name}</h3>
+    <p>Temperature: ${temperature} °f</p>
+    <p>Condition: ${condition}</p>
+  `;
+
+  weatherDataContainer.innerHTML = weatherOutput;
+}
+
+//Weather Icons Object
+const weatherIcons = {
+  Clear: "clear.png",
+  PartlyCloudy: "partly-cloudy.png",
+  Cloudy: "cloudy.png",
+  Rain: "rain.png",
+  Snow: "snow.png",
+  // Add more conditions and corresponding image paths
+};
+
+// Display the weather icon corresponding to the condition
+function displayWeatherIcon(condition) {
+  const iconContainer = document.getElementById("weather-icon");
+  const weatherIconPath = weatherIcons[condition];
+
+  if (weatherIconPath) {
+    iconContainer.innerHTML = `<img src="icons/${weatherIconPath}" alt="${condition}">`;
+  } else {
+    iconContainer.innerHTML = ""; // No icon available
+  }
+}
 
 //To do form with delete button
 form.addEventListener('submit', (event) => {
@@ -86,8 +126,7 @@ function renderImage(meme) {
     memeImage.appendChild(img);
   }
 
-  //Analog Clock
-//analog clock functionality 
+//Analog Clock
 setInterval(()=>{
   currTime = new Date()
   hour = currTime.getHours()
