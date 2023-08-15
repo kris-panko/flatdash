@@ -16,7 +16,15 @@ Stretch Deliverables:
 1. User will automatically see the current weather in their city based on geo-location
 2. User will automatically see the current time in their respective time zone.
 3. User will see an analog clock showing the current time.
-4. User will be able to click memes to cycle through different memes. 
+4. User will be able to click memes to cycle through different memes.
+
+Here is a video showing the deliverables in action!
+
+
+https://github.com/kris-panko/flatdash/assets/11124314/3f033100-6c2d-43e0-b72c-b88c9cca3f4b
+
+
+
 
 API's with JSON structure:
 
@@ -35,6 +43,7 @@ Analog Clock Widget: https://timeapi.io/
 Event listeners to be used: Submit(2), Click, Change
 
 ![Trello](https://github.com/kris-panko/flatdash/assets/11124314/2aa5be67-ecaa-4517-bcdc-be0f316b9e7b)
+
 
 
 
