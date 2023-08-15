@@ -88,10 +88,30 @@ form.addEventListener('submit', (event) => {
       <span class="task-delete">X</span>
     `;
     list.appendChild(newLi);
+    saveTasksToLocalStorage(); // Save the task to local storage******************
     event.target.reset(); // Reset the form input
   }
 });
 
+function saveTasksToLocalStorage() {
+  const tasks = Array.from(document.querySelectorAll(".task-text")).map(task => task.textContent);
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+function loadTasksFromLocalStorage() {
+  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  const list = document.getElementById("tasks");
+  
+  tasks.forEach(taskText => {
+    const newLi = document.createElement("li");
+    newLi.classList.add("task-item");
+    newLi.innerHTML = `
+      <span class="task-text">${taskText}</span>
+      <span class="task-delete">X</span>
+    `;
+    list.appendChild(newLi);
+  });
+}
+window.addEventListener("load", loadTasksFromLocalStorage);
 // Delete task from the list
 taskList.addEventListener("click", (event) => {
   if (event.target.classList.contains("task-delete")) {
