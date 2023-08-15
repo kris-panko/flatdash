@@ -3,6 +3,15 @@ Phase-1 Project
 
 flatDash is a simple dashboard website with multiple useful and fun widgets included for user convenience.
 
+
+Here is a video showing the deliverables in action!
+
+
+https://github.com/kris-panko/flatdash/assets/11124314/3f033100-6c2d-43e0-b72c-b88c9cca3f4b
+
+
+Functionality:
+
 ![flatDash Widget Rough Draft](https://github.com/kris-panko/flatdash/assets/11124314/191115e9-2f58-44e5-aad5-66c14f9906ab)
 
 Deliverables:
@@ -17,14 +26,6 @@ Stretch Deliverables:
 2. User will automatically see the current time in their respective time zone.
 3. User will see an analog clock showing the current time.
 4. User will be able to click memes to cycle through different memes.
-
-Here is a video showing the deliverables in action!
-
-
-https://github.com/kris-panko/flatdash/assets/11124314/3f033100-6c2d-43e0-b72c-b88c9cca3f4b
-
-
-
 
 API's with JSON structure:
 
