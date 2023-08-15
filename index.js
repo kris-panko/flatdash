@@ -1,6 +1,6 @@
 // Constant variables
 const memesUrl = "http://localhost:3000/memes"
-const presistUrl = "http://localhost:3000/presist"
+const persistUrl = "http://localhost:3000/persist"
 const form = document.getElementById("create-new-to-do");
 const taskList = document.getElementById("tasks");
 const darkModeToggle = document.getElementById("dark-mode-checkbox");
@@ -12,17 +12,26 @@ const weatherDataContainer = document.getElementById("weather-data")
 const weatherUrl = "http://api.weatherapi.com/v1" 
 const city = document.querySelector("#city")
 
-fetch(presistUrl)
+
+//Reads db.json to see should it start in dark mode or not
+fetch(persistUrl)
   .then(response=>response.json())
-  .then(data=>console.log(data))
+  .then(data=>{if (data.darkmode.enabled) {
+    dashboardContainer.classList.add("dark-mode")
+    darkModeToggle.checked = true
+  }})
 
 // Dark Mode Toggle!
 darkModeToggle.addEventListener("change", () => {
+  let enabled
     if (darkModeToggle.checked) {
       dashboardContainer.classList.add("dark-mode");
+      enabled = true
     } else {
       dashboardContainer.classList.remove("dark-mode");
+      enabled = false
     }
+  fetch(persistUrl,{method: "PATCH", headers: {"Content-Type": "application/json"}, body: JSON.stringify({"darkmode": {"enabled": enabled}})})
   });
 
 //Weather Widget
