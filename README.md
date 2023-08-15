@@ -16,7 +16,7 @@ Functionality:
 
 Deliverables:
 1. User will be able to input current city and weather widget will return current weather for said city.
-2. User will see a featured meme of the day (specifically programming themed).  User will be able to click meme to regeneratte a new one to display.
+2. User will see a featured meme of the day (specifically programming themed).  User will be able to click randomize to regenerate a new one to display.
 3. User will be able to input tasks as part of a to-do list.  Task will then populate for user reference.
 4. User will then be able to delete the task once complete.
 5. User will be able to toggle the widget from dark/light backgrounds.
