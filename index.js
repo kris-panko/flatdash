@@ -1,4 +1,4 @@
-// To-do form with delete button
+// Constant variables
 const memesUrl = "http://localhost:3000/memes"
 const form = document.getElementById("create-new-to-do");
 const taskList = document.getElementById("tasks");
@@ -6,11 +6,33 @@ const darkModeToggle = document.getElementById("dark-mode-checkbox");
 const dashboardContainer = document.querySelector(".dashboard-container");
 const memeImage = document.getElementById("meme-image")
 const randomMemeBtn = document.getElementById("random-meme-button")
-const apiKey = "af7f90aef268477a84d182200231108"
-const weatherUrl = "https://www.weatherapi.com/"
 const weatherForm = document.getElementById("weather-form")
 const weatherDataContainer = document.getElementById("weather-data")
+const weatherUrl = "http://api.weatherapi.com/v1" 
+const city = document.querySelector("#city")
 
+// Dark Mode Toggle!
+darkModeToggle.addEventListener("change", () => {
+    if (darkModeToggle.checked) {
+      dashboardContainer.classList.add("dark-mode");
+    } else {
+      dashboardContainer.classList.remove("dark-mode");
+    }
+  });
+
+//Weather Widget
+//Coding in the event listener for the weather form
+//Create functions to fetch data from API
+weatherForm.addEventListener("submit", (e) => {  
+    e.preventDefault();
+let query = encodeURI(e.target.city.value); 
+fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${query}&aqi=no`)
+.then(response => response.json())
+.then(data => {
+  console.log(data);})
+});
+
+//To do form with delete button
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const taskText = event.target["new-to-do"].value;
@@ -35,18 +57,10 @@ taskList.addEventListener("click", (event) => {
   }
 });
 
-// Dark Mode Toggle!
-darkModeToggle.addEventListener("change", () => {
-  if (darkModeToggle.checked) {
-    dashboardContainer.classList.add("dark-mode");
-  } else {
-    dashboardContainer.classList.remove("dark-mode");
-  }
-});
-
-let memeData = [];
-
+//Meme Widget 
 // Fetch meme data and render images
+let memeData = []; 
+
 fetch(memesUrl)
   .then(response => response.json())
   .then(data => {
@@ -72,41 +86,18 @@ function renderImage(meme) {
     memeImage.appendChild(img);
   }
 
-//Coding in the event listener for the weather form
-//Create functions to fetch data from API
-weatherForm.addEventListener("submit", (event) => {
-  event.preventDefault();
+  //Analog Clock
+//analog clock functionality 
+setInterval(()=>{
+  currTime = new Date()
+  hour = currTime.getHours()
+  minute = currTime.getMinutes()
+  second = currTime.getSeconds()
+  hour_rotation = 30 * hour + minute / 2
+  minute_rotation = 6 * minute
+  second_rotation = 6 * second
 
-  const city = event.target["city"].value;
-
-  if (city.trim() !== "") {
-    fetchWeather(city);
-  }
-});
-
-function fetchWeather(city) {
-  const apiUrl = `${weatherUrl}?key=${apiKey}&q=${city}&aqi=no`;
-
-  fetch(apiUrl)
-    .then(response => response.json())
-    .then(weather => {  
-      displayWeather(weather);
-    })
-    .catch(error => {
-      console.error("Error fetching weather data:", error);
-      weatherDataContainer.innerHTML = "Error fetching weather data.";
-    });
-}
-//display the weather 
-function displayWeather(weatherData) {
-  const temperature = weatherData.current.temp_c;
-  const condition = weatherData.current.condition.text;
-
-  const weatherOutput = `
-    <h3>Weather in ${weatherData.location.name}</h3>
-    <p>Temperature: ${temperature} &#8451;</p>
-    <p>Condition: ${condition}</p>
-  `;
-
-  weatherDataContainer.innerHTML = weatherOutput;
-}
+  hour_hand.style.transform = `rotate(${hour_rotation}deg)`
+  minute_hand.style.transform = `rotate(${minute_rotation}deg)`
+  second_hand.style.transform = `rotate(${second_rotation}deg)`
+}, 1000)

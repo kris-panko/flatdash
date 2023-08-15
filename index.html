@@ -5,19 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>flatDash</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="apikeys.js"></script>
   <script defer src="index.js"></script>
 </head>
 <body>
-  <div class="dashboard-container">
-    <div class="dashboard">
-      <h1 class="dashboard-title">flatDash</h1>    
-       <div class="dark-mode-toggle">
+  <div class="dark-mode-toggle">
     <label class="switch">
       <input type="checkbox" id="dark-mode-checkbox">
       <span class="slider round"></span>
     </label>
     <span class="toggle-label">Dark Mode Toggle</span>
   </div>
+  <div class="dashboard-container">
+    <div class="dashboard">
+      <h1 class="dashboard-title">【ｆｌａｔＤａｓｈ】</h1>    
+
       <div class="widgets-container">
       <div class="widgets-container">
         <div class="widget weather-widget">
@@ -25,7 +27,7 @@
           <h2>Weather</h2>
           <form id="weather-form">
             <label for="city">Enter City:</label>
-            <input type="text" id="city" name="city" required><br>
+            <input type="text" id="city" name="city" placeholder ="Enter city.." required><br>
             <button type="submit">Get Weather</button>
           </form>
           <div id="weather-data"></div>
@@ -48,16 +50,16 @@
         <div class="widget meme-widget">
           <!-- Meme of the Day widget content -->
           <h2>Meme of the Day</h2>
-          <img id="meme-image" class="meme-image" src="" alt="Meme of the Day">
+          <img id="meme-image" class="meme-image" src="" alt="Meme of the Day"> 
           <button id="random-meme-button">Randomize</button>
         </div>
         <div class="widget clock-widget">
           <!-- Analog Clock widget content -->
           <h2>Analog Clock</h2>
           <div class="clock">
-            <div class="hour-hand" id="hour-hand"></div>
-            <div class="minute-hand" id="minute-hand"></div>
-            <div class="second-hand" id="second-hand"></div>
+            <div class="hour_hand" id="hour_hand"></div>
+            <div class="minute_hand" id="minute_hand"></div>
+            <div class="second_hand" id="second_hand"></div>
           </div>
         </div>
       </div>
