@@ -1,5 +1,6 @@
 // Constant variables
 const memesUrl = "http://localhost:3000/memes"
+const presistUrl = "http://localhost:3000/presist"
 const form = document.getElementById("create-new-to-do");
 const taskList = document.getElementById("tasks");
 const darkModeToggle = document.getElementById("dark-mode-checkbox");
@@ -11,6 +12,9 @@ const weatherDataContainer = document.getElementById("weather-data")
 const weatherUrl = "http://api.weatherapi.com/v1" 
 const city = document.querySelector("#city")
 
+fetch(presistUrl)
+  .then(response=>response.json())
+  .then(data=>console.log(data))
 
 // Dark Mode Toggle!
 darkModeToggle.addEventListener("change", () => {
@@ -31,7 +35,7 @@ fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${query}&aqi=no
 .then(response => response.json())
 .then(weather => {
   displayWeather(weather)
-  displayWeatherIcon(weather.current.condition.text)
+  displayWeatherIcon(weather.current.condition)
 })
 });
 
@@ -50,23 +54,13 @@ function displayWeather(weather) {
   weatherDataContainer.innerHTML = weatherOutput;
 }
 
-//Weather Icons Object
-const weatherIcons = {
-  Clear: "clear.png",
-  PartlyCloudy: "partly-cloudy.png",
-  Cloudy: "cloudy.png",
-  Rain: "rain.png",
-  Snow: "snow.png",
-  // Add more conditions and corresponding image paths
-};
-
 // Display the weather icon corresponding to the condition
 function displayWeatherIcon(condition) {
   const iconContainer = document.getElementById("weather-icon");
-  const weatherIconPath = weatherIcons[condition];
+  const weatherIconPath = encodeURI(condition.icon);
 
   if (weatherIconPath) {
-    iconContainer.innerHTML = `<img src="icons/${weatherIconPath}" alt="${condition}">`;
+    iconContainer.innerHTML = `<img src="${weatherIconPath}" alt="${condition.text}">`;
   } else {
     iconContainer.innerHTML = ""; // No icon available
   }
