@@ -45,20 +45,6 @@ let query = encodeURI(e.target.city.value);
 fetchAndDisplayWeather(query)
 });
 
-//Adding Geolocation btn to weather widget
-const getLocationButton = document.getElementById("get-location-btn");
-
-getLocationButton.addEventListener("click", () => {
-  if ("geolocation" in navigator) {
-    navigator.geolocation.getCurrentPosition((position) => {
-      const query = `${position.coords.latitude},${position.coords.longitude}`
-      fetchAndDisplayWeather(query)
-    });
-  } else {
-    console.log("Geolocation is not available.");
-  }
-});
-
 function fetchAndDisplayWeather(query){
 fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${query}&aqi=no`)
 .then(response => response.json())
@@ -94,6 +80,15 @@ function displayWeatherIcon(condition) {
     iconContainer.innerHTML = ""; // No icon available
   }
 }
+
+//All the following grabs the users location and automatically renders the weather
+function initialGrabError(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+function intialGrabSuccess(pos){
+  fetchAndDisplayWeather(`${pos.coords.latitude},${pos.coords.longitude}`)
+}
+navigator.geolocation.getCurrentPosition(intialGrabSuccess, initialGrabError, {enableHighAccuracy: false, timeout: 5000, maximumAge: 0});
 
 //To do form with delete button
 form.addEventListener('submit', (event) => {
@@ -190,11 +185,3 @@ setInterval(()=>{
   second_hand.style.transform = `rotate(${second_rotation}deg)`
 }, 1000)
 
-//All the following grabs the users location and automaticaly renders it in the weather widget
-function initialGrabError(err) {
-  console.warn(`ERROR(${err.code}): ${err.message}`);
-}
-function intialGrabSuccess(pos){
-  fetchAndDisplayWeather(`${pos.coords.latitude},${pos.coords.longitude}`)
-}
-navigator.geolocation.getCurrentPosition(intialGrabSuccess, initialGrabError, {enableHighAccuracy: false, timeout: 5000, maximumAge: 0});
