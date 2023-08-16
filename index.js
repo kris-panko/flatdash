@@ -31,6 +31,7 @@ darkModeToggle.addEventListener("change", () => {
       dashboardContainer.classList.remove("dark-mode");
       enabled = false
     }
+    //Patch for dark mode persistence if toggled when page is refreshed
   fetch(persistUrl,{method: "PATCH", headers: {"Content-Type": "application/json"}, body: JSON.stringify({"darkmode": {"enabled": enabled}})})
   });
 
@@ -46,6 +47,27 @@ fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${query}&aqi=no
   displayWeather(weather)
   displayWeatherIcon(weather.current.condition)
 })
+});
+
+//Adding Geolocation btn to weather widget
+const getLocationButton = document.getElementById("get-location-btn");
+
+getLocationButton.addEventListener("click", () => {
+  if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition((position) => {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      
+      fetch(`${weatherUrl}/current.json?key=${apiKey}&q=${latitude},${longitude}&aqi=no`)
+        .then(response => response.json())
+        .then(weather => {
+          displayWeather(weather);
+          displayWeatherIcon(weather.current.condition);
+        });
+    });
+  } else {
+    console.log("Geolocation is not available.");
+  }
 });
 
 
