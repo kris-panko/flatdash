@@ -63,8 +63,7 @@
   ],
   "persist": {
     "darkmode": {
-      "enabled": true
-    },
-    "to_do": []
+      "enabled": false
+    }
   }
 }

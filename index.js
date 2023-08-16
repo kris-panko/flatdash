@@ -1,16 +1,17 @@
 // Constant variables
-const memesUrl = "http://localhost:3000/memes"
-const persistUrl = "http://localhost:3000/persist"
+const memesUrl = "http://localhost:3000/memes";
+const persistUrl = "http://localhost:3000/persist";
 const form = document.getElementById("create-new-to-do");
 const taskList = document.getElementById("tasks");
 const darkModeToggle = document.getElementById("dark-mode-checkbox");
 const dashboardContainer = document.querySelector(".dashboard-container");
-const memeImage = document.getElementById("meme-image")
-const randomMemeBtn = document.getElementById("random-meme-button")
-const weatherForm = document.getElementById("weather-form")
-const weatherDataContainer = document.getElementById("weather-data")
-const weatherUrl = "http://api.weatherapi.com/v1" 
-const city = document.querySelector("#city")
+const memeImage = document.getElementById("meme-image");
+const randomMemeBtn = document.getElementById("random-meme-button");
+const weatherForm = document.getElementById("weather-form");
+const weatherDataContainer = document.getElementById("weather-data");
+const weatherUrl = "http://api.weatherapi.com/v1" ;
+const city = document.querySelector("#city");
+const list = document.getElementById("tasks");
 
 
 //Reads db.json to see should it start in dark mode or not
@@ -102,14 +103,7 @@ form.addEventListener('submit', (event) => {
   event.preventDefault();
   const taskText = event.target["new-to-do"].value;
   if (taskText.trim() !== "") { // Check if the task is not empty or just spaces
-    const list = document.getElementById("tasks");
-    const newLi = document.createElement("li");
-    newLi.classList.add("task-item"); // Apply the task-item class
-    newLi.innerHTML = `
-      <span class="task-text">${taskText}</span>
-      <span class="task-delete">X</span>
-    `;
-    list.appendChild(newLi);
+    appendTask(taskText)
     saveTasksToLocalStorage(); // Save the task to local storage******************
     event.target.reset(); // Reset the form input
   }
@@ -119,26 +113,39 @@ function saveTasksToLocalStorage() {
   const tasks = Array.from(document.querySelectorAll(".task-text")).map(task => task.textContent);
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
+
 function loadTasksFromLocalStorage() {
   const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-  const list = document.getElementById("tasks");
-  
   tasks.forEach(taskText => {
-    const newLi = document.createElement("li");
-    newLi.classList.add("task-item");
-    newLi.innerHTML = `
-      <span class="task-text">${taskText}</span>
-      <span class="task-delete">X</span>
-    `;
-    list.appendChild(newLi);
+    appendTask(taskText)
   });
 }
+
+function removeTaskFromLocalStorage(taskText) {
+  const tasks = JSON.parse(localStorage.getItem("tasks")) || []; // Pulls info from localStorage
+  const updatedTasks = tasks.filter(task => task !== taskText); // Filters out items wanted to be removed, puts new array into new variable
+  localStorage.setItem("tasks", JSON.stringify(updatedTasks)); // Pushs new variable to localStorage
+}
+
+//Task Append Function
+function appendTask(taskText){
+  const newLi = document.createElement("li");
+  newLi.classList.add("task-item"); // Apply the task-item class
+  newLi.innerHTML = `
+    <span class="task-text">${taskText}</span>
+    <span class="task-delete">X</span>
+  `;
+  list.appendChild(newLi);
+}
+
 window.addEventListener("load", loadTasksFromLocalStorage);
 // Delete task from the list
 taskList.addEventListener("click", (event) => {
   if (event.target.classList.contains("task-delete")) {
     const taskItem = event.target.parentElement;
     taskList.removeChild(taskItem);
+    const taskText = taskItem.querySelector(".task-text").textContent;
+    removeTaskFromLocalStorage(taskText);
   }
 });
 
