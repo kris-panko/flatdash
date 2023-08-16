@@ -42,12 +42,7 @@ darkModeToggle.addEventListener("change", () => {
 weatherForm.addEventListener("submit", (e) => {  
     e.preventDefault();
 let query = encodeURI(e.target.city.value); 
-fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${query}&aqi=no`)
-.then(response => response.json())
-.then(weather => {
-  displayWeather(weather)
-  displayWeatherIcon(weather.current.condition)
-})
+fetchAndDisplayWeather(query)
 });
 
 //Adding Geolocation btn to weather widget
@@ -56,20 +51,22 @@ const getLocationButton = document.getElementById("get-location-btn");
 getLocationButton.addEventListener("click", () => {
   if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition((position) => {
-      const latitude = position.coords.latitude;
-      const longitude = position.coords.longitude;
-      
-      fetch(`${weatherUrl}/current.json?key=${apiKey}&q=${latitude},${longitude}&aqi=no`)
-        .then(response => response.json())
-        .then(weather => {
-          displayWeather(weather);
-          displayWeatherIcon(weather.current.condition);
-        });
+      const query = `${position.coords.latitude},${position.coords.longitude}`
+      fetchAndDisplayWeather(query)
     });
   } else {
     console.log("Geolocation is not available.");
   }
 });
+
+function fetchAndDisplayWeather(query){
+fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${query}&aqi=no`)
+.then(response => response.json())
+.then(weather => {
+  displayWeather(weather)
+  displayWeatherIcon(weather.current.condition)
+})
+}
 
 
 // Display weather data in the weather widget
@@ -192,3 +189,12 @@ setInterval(()=>{
   minute_hand.style.transform = `rotate(${minute_rotation}deg)`
   second_hand.style.transform = `rotate(${second_rotation}deg)`
 }, 1000)
+
+//All the following grabs the users location and automaticaly renders it in the weather widget
+function initialGrabError(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+function intialGrabSuccess(pos){
+  fetchAndDisplayWeather(`${pos.coords.latitude},${pos.coords.longitude}`)
+}
+navigator.geolocation.getCurrentPosition(intialGrabSuccess, initialGrabError, {enableHighAccuracy: false, timeout: 5000, maximumAge: 0});
