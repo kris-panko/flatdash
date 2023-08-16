@@ -61,8 +61,8 @@
       "height": 1000
     },
     {
-      "id": "11",
-      "path": "https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be7eedf8e1f31aabcec_BwENfmI0CU5dZGYlSyo142mpfG08-rYgTS-Qm47uMUXN6JXtmdZvtzVzTooUQdXTWmTD8uzF9N6XQJA2vUIMi53tunFyVtvOBJTNfOjHit2P_JkTmFzFsK7ep6Vb9781XZnRAryH.png",
+      "id": "11", 
+      "path": "https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png",
       "width": 911,
       "height": 1000
     },
@@ -79,8 +79,8 @@
       "height": 1000
     },
     {
-      "id": "14",
-      "path": "https://programmerhumor.io/wp-content/uploads/2022/10/programmerhumor-io-programming-memes-01ecccc67aa45f4-758x1015.jpg",
+      "id": "14", 
+      "path": "https://gitpiper.com/assets/memes/programming-meme-ff7166d5-d272-4fce-8e30-cef42a514420.webp",
       "width": 911,
       "height": 1000
     },
@@ -104,7 +104,7 @@
     },
     {
       "id": "18",
-      "path": "",
+      "path": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/96e6bf3b-9448-43f0-8ca6-4a8c73197c46/df5ilj0-8740f2e9-cc63-426b-ac05-90a85df83e8f.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzk2ZTZiZjNiLTk0NDgtNDNmMC04Y2E2LTRhOGM3MzE5N2M0NlwvZGY1aWxqMC04NzQwZjJlOS1jYzYzLTQyNmItYWMwNS05MGE4NWRmODNlOGYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.tvmEe0yeP_syhRwI73RvlUvlwA1lDOWv8z2qRGjshhg",
       "width": 911,
       "height": 1000
     },
@@ -133,8 +133,8 @@
       "height": 1000
     },
     {
-      "id": "23",
-      "path": "https://ih1.redbubble.net/image.3352348496.3054/st,small,845x845-pad,1000x1000,f8f8f8.jpg",
+      "id": "23", 
+      "path": "https://i.imgflip.com/51j9nr.jpg",
       "width": 911,
       "height": 1000
     },
@@ -145,8 +145,8 @@
       "height": 1000
     },
     {
-      "id": "25",
-      "path": "https://ih1.redbubble.net/image.3046220789.1503/flat,750x,075,f-pad,750x1000,f8f8f8.jpg",
+      "id": "25", 
+      "path": "https://images7.memedroid.com/images/UPLOADED867/62d4f870aa98b.jpeg",
       "width": 911,
       "height": 1000
     },
@@ -183,7 +183,7 @@
   ],
   "persist": {
     "darkmode": {
-      "enabled": true
+      "enabled": false
     }
   }
 }
