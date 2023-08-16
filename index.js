@@ -119,17 +119,59 @@ function removeTaskFromLocalStorage(taskText) {
   localStorage.setItem("tasks", JSON.stringify(updatedTasks)); // Pushs new variable to localStorage
 }
 
-//Task Append Function
-function appendTask(taskText){
+function appendTask(taskText) {
   const newLi = document.createElement("li");
-  newLi.classList.add("task-item"); // Apply the task-item class
+  newLi.classList.add("task-item");
   newLi.innerHTML = `
     <span class="task-text">${taskText}</span>
     <span class="task-delete">X</span>
   `;
+  
+  // Add draggable attribute
+  newLi.setAttribute('draggable', true);
+  
+  // Attach drag and drop event listeners
+  newLi.addEventListener('dragstart', handleDragStart);
+  newLi.addEventListener('dragover', handleDragOver);
+  newLi.addEventListener('drop', handleDrop);
+  newLi.addEventListener('dragend', handleDragEnd);
+  
   list.appendChild(newLi);
 }
 
+// Define the drag and drop event handlers
+function handleDragStart(event) {
+  draggedItem = event.target;
+  event.dataTransfer.effectAllowed = 'move';
+  event.dataTransfer.setData('text/html', event.target.innerHTML);
+}
+
+function handleDragOver(event) {
+  if (event.preventDefault) {
+    event.preventDefault();
+  }
+  event.dataTransfer.dropEffect = 'move';
+  return false;
+}
+
+function handleDrop(event) {
+  if (event.stopPropagation) {
+    event.stopPropagation();
+  }
+
+  if (draggedItem !== this) {
+    draggedItem.innerHTML = this.innerHTML;
+    this.innerHTML = event.dataTransfer.getData('text/html');
+  }
+
+  return false;
+}
+
+function handleDragEnd() {
+  draggedItem = null;
+}
+
+//Store tasks until manually deleted
 window.addEventListener("load", loadTasksFromLocalStorage);
 // Delete task from the list
 taskList.addEventListener("click", (event) => {
@@ -184,4 +226,3 @@ setInterval(()=>{
   minute_hand.style.transform = `rotate(${minute_rotation}deg)`
   second_hand.style.transform = `rotate(${second_rotation}deg)`
 }, 1000)
-

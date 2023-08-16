@@ -18,9 +18,9 @@ Weather Widget
 - Weather will render with temperature, conditions, and corresponding weather icon. 
 - If field is not filled out, an error will display. 
 
-
 To-Do List 
 - Add items to a to-do list.
+- To-Do list items can be reordered by drag and drop.
 - Delete to-do list items. 
 - Items will persist until manually deleted. 
 
@@ -34,8 +34,6 @@ Analog Clock
 
 
 Here is a video showing the deliverables in action!
-
-
 
 
 https://github.com/kris-panko/flatdash/assets/11124314/721b930a-2a03-454f-9b21-e396f5380b74

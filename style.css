@@ -255,3 +255,11 @@ input:checked + .slider:before {
   cursor: pointer;
   color: #f44336;
 }
+
+.task-item[draggable="true"] {
+  cursor: grab;
+}
+
+.task-item[draggable="true"]:active {
+  cursor: grabbing;
+}
