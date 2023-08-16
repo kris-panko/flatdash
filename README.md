@@ -36,7 +36,11 @@ Analog Clock
 Here is a video showing the deliverables in action!
 
 
-https://github.com/kris-panko/flatdash/assets/11124314/3f033100-6c2d-43e0-b72c-b88c9cca3f4b
+
+
+https://github.com/kris-panko/flatdash/assets/11124314/721b930a-2a03-454f-9b21-e396f5380b74
+
+
 
 
 Initial Rough Draft & Project Planning: 
