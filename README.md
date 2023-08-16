@@ -21,6 +21,7 @@ Weather Widget
 To-Do List 
 - Add items to a to-do list.
 - To-Do list items can be reordered by drag and drop.
+- Drag and drop positions persist. 
 - Delete to-do list items. 
 - Items will persist until manually deleted. 
 
