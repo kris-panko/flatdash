@@ -1,3 +1,4 @@
+
 {
   "memes": [
     {
@@ -59,11 +60,125 @@
       "path": "https://pbs.twimg.com/media/EyD2m3PU4AMC0VE.jpg",
       "width": 911,
       "height": 1000
+    },
+    {
+      "id": "11",
+      "path": "https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be7eedf8e1f31aabcec_BwENfmI0CU5dZGYlSyo142mpfG08-rYgTS-Qm47uMUXN6JXtmdZvtzVzTooUQdXTWmTD8uzF9N6XQJA2vUIMi53tunFyVtvOBJTNfOjHit2P_JkTmFzFsK7ep6Vb9781XZnRAryH.png",
+      "width": 911,
+      "height": 1000
+    },
+    {
+      "id": "12",
+      "path": "https://gitpiper.com/assets/memes/programming-meme-e4d7062f-d839-414e-984c-332866c86602.webp",
+      "width": 911,
+      "height": 1000
+    },
+    {
+      "id": "13",
+      "path": "https://miro.medium.com/v2/resize:fit:1400/0*r6iQzljiuJavVxRM",
+      "width": 911,
+      "height": 1000
+    },    {
+      "id": "14",
+      "path": "https://programmerhumor.io/wp-content/uploads/2022/10/programmerhumor-io-programming-memes-01ecccc67aa45f4-758x1015.jpg",
+      "width": 911,
+      "height": 1000
+    },    {
+      "id": "15",
+      "path": "https://codingbootcamps.io/wp-content/uploads/m1.png",
+      "width": 911,
+      "height": 1000
+    },    {
+      "id": "16",
+      "path": "https://global.discourse-cdn.com/standard14/uploads/daml/original/2X/6/67f84d7cc57fd16c74e4d9f0df50190748848c7b.jpeg",
+      "width": 911,
+      "height": 1000
+    },    {
+      "id": "17",
+      "path": "https://s3.amazonaws.com/rails-camp-tutorials/blog/programming+memes/states-of-a-programmer.png",
+      "width": 911,
+      "height": 1000
+    },    {
+      "id": "18",
+      "path": "",
+      "width": 911,
+      "height": 1000
+    },    {
+      "id": "19",
+      "path": "https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33bf3a2121cc74f72a286_0AEnnZYBAYzmSXzyGaopjvEGKKO1yFqf_zMXqFTAT6vUDfXVPRifI3J8oBjZUl51PnRQqf2tqpjiRt33IKgg4sTiJi2YShGTN5iNUIoYbNj2HXobiQg4-k7yBiNT54EKOGYyZOR2.png",
+      "width": 911,
+      "height": 1000
+    },    {
+      "id": "20",
+      "path": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyF2HpyPPWSz-KOEDYupvaaRALZb5n2d7Uaw&usqp=CAU",
+      "width": 911,
+      "height": 1000
+
+    },    {
+      "id": "21",
+      "path": "https://miro.medium.com/v2/resize:fit:640/1*rIL0njh-OExpKt4WS55LMQ.jpeg",
+      "width": 911,
+      "height": 1000
+    }, 
+    {
+      "id": "22",
+      "path": "https://miro.medium.com/v2/resize:fit:756/1*KcQUEkOQ1LoMDHkMZ-Yymw.jpeg",
+      "width": 911,
+      "height": 1000
+    },
+    {
+      "id": "23",
+      "path": "https://ih1.redbubble.net/image.3352348496.3054/st,small,845x845-pad,1000x1000,f8f8f8.jpg",
+      "width": 911,
+      "height": 1000
+    },
+    {
+      "id": "24",
+      "path": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShazfVMCKwj8pcPN0L0YQXJ4QbRgUs6jph4A&usqp=CAU",
+      "width": 911,
+      "height": 1000
+    },
+    {
+      "id": "25",
+      "path": "https://ih1.redbubble.net/image.3046220789.1503/flat,750x,075,f-pad,750x1000,f8f8f8.jpg",
+      "width": 911,
+      "height": 1000
+    },
+    {
+      "id": "26",
+      "path": "https://realtoughcandy.com/wp-content/uploads/2022/02/shrimp-meme.jpg",
+      "width": 911,
+      "height": 1000
+    },
+    {
+      "id": "27",
+      "path": "https://cdn.dribbble.com/users/6056081/screenshots/17758417/media/d713673f10be2404732955e7714db120.jpg?resize=400x0",
+      "width": 911,
+      "height": 1000
+    },
+    {
+      "id": "28",
+      "path": "https://img-9gag-fun.9cache.com/photo/aYVm1YN_460s.jpg",
+      "width": 911,
+      "height": 1000
+    },
+    {
+      "id": "29",
+      "path": "https://img.ifunny.co/images/0e1d8ebd5ef38ef239a1c2f6a4fef3fe91ef85c0ad9fb7f0b2b60c486d6ec4b7_1.jpg",
+      "width": 911,
+      "height": 1000
+    },
+    {
+      "id": "30",
+      "path": "https://media.licdn.com/dms/image/C5622AQFFZID5WexQ1w/feedshare-shrink_2048_1536/0/1673011948990?e=2147483647&v=beta&t=4moz6KOIVkw8FnSX2BmUmJxyBipHdQj81W7JgLzdVLc",
+      "width": 911,
+      "height": 1000
     }
   ],
   "persist": {
     "darkmode": {
-      "enabled": false
-    }
+      "enabled": true
+    },
+    "to_do": []
   }
 }
