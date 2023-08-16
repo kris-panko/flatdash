@@ -162,6 +162,7 @@ function handleDrop(event) {
   if (draggedItem !== this) {
     draggedItem.innerHTML = this.innerHTML;
     this.innerHTML = event.dataTransfer.getData('text/html');
+    saveTasksToLocalStorage()
   }
 
   return false;

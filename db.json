@@ -1,4 +1,3 @@
-
 {
   "memes": [
     {
@@ -78,48 +77,55 @@
       "path": "https://miro.medium.com/v2/resize:fit:1400/0*r6iQzljiuJavVxRM",
       "width": 911,
       "height": 1000
-    },    {
+    },
+    {
       "id": "14",
       "path": "https://programmerhumor.io/wp-content/uploads/2022/10/programmerhumor-io-programming-memes-01ecccc67aa45f4-758x1015.jpg",
       "width": 911,
       "height": 1000
-    },    {
+    },
+    {
       "id": "15",
       "path": "https://codingbootcamps.io/wp-content/uploads/m1.png",
       "width": 911,
       "height": 1000
-    },    {
+    },
+    {
       "id": "16",
       "path": "https://global.discourse-cdn.com/standard14/uploads/daml/original/2X/6/67f84d7cc57fd16c74e4d9f0df50190748848c7b.jpeg",
       "width": 911,
       "height": 1000
-    },    {
+    },
+    {
       "id": "17",
       "path": "https://s3.amazonaws.com/rails-camp-tutorials/blog/programming+memes/states-of-a-programmer.png",
       "width": 911,
       "height": 1000
-    },    {
+    },
+    {
       "id": "18",
       "path": "",
       "width": 911,
       "height": 1000
-    },    {
+    },
+    {
       "id": "19",
       "path": "https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33bf3a2121cc74f72a286_0AEnnZYBAYzmSXzyGaopjvEGKKO1yFqf_zMXqFTAT6vUDfXVPRifI3J8oBjZUl51PnRQqf2tqpjiRt33IKgg4sTiJi2YShGTN5iNUIoYbNj2HXobiQg4-k7yBiNT54EKOGYyZOR2.png",
       "width": 911,
       "height": 1000
-    },    {
+    },
+    {
       "id": "20",
       "path": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyF2HpyPPWSz-KOEDYupvaaRALZb5n2d7Uaw&usqp=CAU",
       "width": 911,
       "height": 1000
-
-    },    {
+    },
+    {
       "id": "21",
       "path": "https://miro.medium.com/v2/resize:fit:640/1*rIL0njh-OExpKt4WS55LMQ.jpeg",
       "width": 911,
       "height": 1000
-    }, 
+    },
     {
       "id": "22",
       "path": "https://miro.medium.com/v2/resize:fit:756/1*KcQUEkOQ1LoMDHkMZ-Yymw.jpeg",
@@ -178,7 +184,6 @@
   "persist": {
     "darkmode": {
       "enabled": true
-    },
-    "to_do": []
+    }
   }
 }
